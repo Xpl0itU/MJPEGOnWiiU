@@ -3,5 +3,6 @@
 
 void RunApp();
 void AppCleanup();
+void AppInit();
 
 #endif //__APP_H

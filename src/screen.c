@@ -10,7 +10,8 @@
 #include <coreinit/systeminfo.h>
 #include <gx2/state.h>
 #include <gx2/event.h>
-#include <dmae/dmae.h>
+#include <dmae/mem.h>
+#include <dmae/sync.h>
 #include "common.h"
 #include "log.h"
 #include "screen.h"
@@ -111,6 +112,6 @@ void WaitForVysnc() {
     } else {
         LOGF("ERROR: Vsync on core %d; only allowed on %d! Waiting 16ms.\n", \
         OSGetCoreId(), OSIsMainCore());
-        OSSleepTicks(OSMilliseconds(16));
+        OSSleepTicks(OSMillisecondsToTicks(16));
     }
 }

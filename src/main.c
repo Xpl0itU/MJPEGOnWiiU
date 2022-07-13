@@ -6,7 +6,8 @@
 #include <proc_ui/procui.h>
 #include <whb/log_cafe.h>
 #include <whb/log_udp.h>
-#include <dmae/dmae.h>
+#include <dmae/mem.h>
+#include <dmae/sync.h>
 #include "common.h"
 #include "log.h"
 #include "app.h"
@@ -48,7 +49,6 @@ int main(int argc, char** argv) {
     WHBLogUdpInit();
     LOG("Hello World!\n");
 
-    InitDMAEFunctionPointers();
     Init();
 
     while(MainLoop());
