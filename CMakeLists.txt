@@ -18,5 +18,5 @@ include_directories(${CMAKE_SOURCE_DIR}/ext/include)
 
 include_directories(${CMAKE_SOURCE_DIR}/src)
 set_property(TARGET mediap PROPERTY C_STANDARD 99)
-set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wall -Wextra")
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wall -Wextra -Ofast -flto=auto -fno-fat-lto-objects -fuse-linker-plugin -pipe")
 wut_create_rpx(mediap)
